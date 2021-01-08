@@ -7,7 +7,7 @@ class DemoController < ApplicationController
   end
 
   def hello
-    redirected_to(index_path)
+    redirect_to(index_path)
   end
 
 

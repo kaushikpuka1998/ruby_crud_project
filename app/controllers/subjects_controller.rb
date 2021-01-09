@@ -1,4 +1,6 @@
 class SubjectsController < ApplicationController
+
+  layout false
   def new
   end
 
@@ -8,6 +10,7 @@ class SubjectsController < ApplicationController
 
 
   def index
+    @subjects = Subject.sorted
   end
 
   def show

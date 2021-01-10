@@ -2,10 +2,16 @@ class SubjectsController < ApplicationController
 
   layout false
   def new
+    @subject = Subject.new()
   end
 
   def create
-
+    @subject = Subject.new(subject_params)
+    if @subject.save
+      redirect_to(subjects_path)
+    else
+      render('new')
+    end
   end
 
 
@@ -30,4 +36,11 @@ class SubjectsController < ApplicationController
   def destroy
 
   end
+
+
+  private
+
+    def subject_params
+      params.required(:subject).permit(:name,:position,:visisble)
+    end
 end

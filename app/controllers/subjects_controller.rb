@@ -24,9 +24,18 @@ class SubjectsController < ApplicationController
   end
 
   def edit
+    @subject = Subject.find(params[:id])
   end
 
   def update
+    @subject = Subject.find(params[:id])
+    @subject = Subject.new(subject_params)
+
+    if(@subject.save)
+      redirect_to(subjects_path)
+    else
+      render('new')
+    end
   end
 
   def delete
@@ -41,6 +50,6 @@ class SubjectsController < ApplicationController
   private
 
     def subject_params
-      params.required(:subject).permit(:name,:position,:visisble)
+      params.required(:subject).permit(:name,:position,:visible)
     end
 end

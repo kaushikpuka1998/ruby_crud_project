@@ -25,11 +25,12 @@
     font-family:sans-serif
  }
 
-  td, th {
+  td, th,tr {
     border: 1px solid #971a1a;
     text-align: center;
     padding: 8px;
   }
+
   
  
    footer {
@@ -42,6 +43,15 @@
 
    tr.spaceUnder {
     border-spacing: 1 2mm;
+  }
+
+  p{
+    font-style: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+ .container{
+    
+    margin-left: 580px;
   }
 
   

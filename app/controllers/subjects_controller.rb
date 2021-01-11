@@ -39,11 +39,18 @@ class SubjectsController < ApplicationController
   end
 
   def delete
+    @subject = Subject.find(params[:id])
   end
 
 
   def destroy
-
+    @subject = Subject.find(params[:id])
+    
+    if(@subject.destroy)
+      redirect_to(subjects_path)
+    else
+      render('new')
+    end
   end
 
 

@@ -8,7 +8,7 @@ class SubjectsController < ApplicationController
   def create
     @subject = Subject.new(subject_params)
     if @subject.save
-      redirect_to(subjects_path)
+      redirect_to(subject_path(@subject))
     else
       render('new')
     end
@@ -25,17 +25,18 @@ class SubjectsController < ApplicationController
 
   def edit
     @subject = Subject.find(params[:id])
+    
   end
 
   def update
     @subject = Subject.find(params[:id])
-    @subject = Subject.new(subject_params)
-
-    if(@subject.save)
-      redirect_to(subjects_path)
+    if  @subject.update(subject_params)
+     
+      redirect_to(subject_path(@subject))
     else
-      render('new')
+      render('edit')
     end
+    
   end
 
   def delete
@@ -49,7 +50,7 @@ class SubjectsController < ApplicationController
     if(@subject.destroy)
       redirect_to(subjects_path)
     else
-      render('new')
+      render('delete')
     end
   end
 

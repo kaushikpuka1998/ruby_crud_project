@@ -1,8 +1,26 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+
 <div>
     <h1> Subjects Index</h1>
-    <%= link_to("Add new Subjects" ,'subjects/new',:class => 'action new')%>
+    <%= link_to("Add new Subjects" ,'subjects/new',:class => 'action-new')%>
 
-    <table class="listing" summary="Subject list">
+    <table class = "table table-white table-hover" summary="Subject list">
         <tr >
             <th>#</th>
             <th>Subject Name</th>
@@ -18,13 +36,22 @@
             <td><%= subject.position %></td>
             <td class="center"><%= subject.visible ? 'Yes': 'No' %></td>
             <td class="center"><%= subject.pages.size %></td>
-            <td class = "action">
-                <%= link_to("Show",subject_path(subject.id),:class => 'action show')%>
-                <%= link_to("Edit",edit_subject_path(subject.id),:class => 'action ediet')%>
-                <%= link_to("Delete",delete_subject_path(subject.id),:class => 'action delete')%>
-
+            <td >
+            
+                 <%= link_to("Show",subject_path(subject.id),:class => 'fa fa-eye',:style =>"color:green")%>
+            
+         
+                <%= link_to("Edit",edit_subject_path(subject.id),:class => 'fa fa-edit',:style =>"color:#971a1a")%><p>
+                <%= link_to("Delete",delete_subject_path(subject.id),:class => 'fa fa-trash')%>
             </td>
+
+            
         </tr>
         <% end %>
     </table>
 </div>
+
+<footer>
+  <p>Made By: Kaushik Ghosh<br>
+  <a href="mailto:kaushikghosh199832@gmail.com">kaushikghosh199832@gmail.com</a></p>
+</footer>

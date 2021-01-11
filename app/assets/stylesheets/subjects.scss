@@ -1,3 +1,33 @@
 // Place all the styles related to the Subjects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+ 
+ 
+ table {
+     font-family: arial, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+   }
+ 
+   td, th {
+     border: 1px solid #dddddd;
+     text-align: left;
+     padding: 8px;
+   }
+ 
+   footer {
+     text-align: center;
+     padding: 3px;
+     margin-top: 345px;
+     background-color: DarkSalmon;
+     color: white;
+   }
+
+
+
+ 

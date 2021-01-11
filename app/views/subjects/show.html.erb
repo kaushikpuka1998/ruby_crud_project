@@ -1,7 +1,20 @@
-<%= link_to("BACK TO LIST", subjects_path, :class => 'back-link')%>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= link_to("<---Back To The List", subjects_path, :class => 'back-link')%>
+
+
 <div class="sujects show">
   <h1>Show Subject</h1>
-  <table summary="Subject detail view">
+  <table class = "table table-white table-hover">
     <tr>
       <th>Name</th>
       <td><%= @subject.name %></td>
@@ -23,4 +36,12 @@
       <td><%= @subject.updated_at %></td>
     </tr>
   </table>
+</div>
+<div>
+
+<footer>
+
+  <p>Made By: Kaushik Ghosh<br>
+  <a href="mailto:kaushikghosh199832@gmail.com">kaushikghosh199832@gmail.com</a></p>
+</footer>
 </div>

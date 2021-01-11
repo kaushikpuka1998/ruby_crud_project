@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+ 
+.back-link{
+     font-size: 24px;
+     font-family:sans-serif
+
+ }
+ .action-new{
+    font-size: 35px;
+    font-family:sans-serif
+ }
+
+  td, th {
+    border: 1px solid #971a1a;
+    text-align: center;
+    padding: 8px;
+  }
+  
+ 
+   footer {
+     text-align: center;
+     padding: 15px;
+     margin-top: 0px;
+     background-color: DarkSalmon;
+     color: white;
+   }
+
+   tr.spaceUnder {
+    border-spacing: 0 2em;
+  }

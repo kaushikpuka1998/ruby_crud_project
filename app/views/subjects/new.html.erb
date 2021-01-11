@@ -1,12 +1,27 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%= link_to("BACK TO LIST", subjects_path, :class => 'back-link')%>
-<div class="subject new">
+ <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<%= link_to("<---BACK TO LIST", subjects_path, :class => 'back-link')%>
+
+
+<div class="jumbotron">
   <h1>Create Subject</h1>
+</div>
+<div class="subject new">
+
   <%= form_for(@subject)do |f| %>
-  <table summary="Subject for fields">
+  <table class = "table table-white table-hover">
     <tr>
       <th>Name</th>
-      <td><%= f.text_field(:name)%></td>
+      <td><%= f.text_field :name ,size:"60px" %></td>
     </tr>
     <tr>
       <th>Position</th>
@@ -22,3 +37,8 @@
   </div>
   <%end%>
 </div>
+
+<footer>
+  <p>Made By: Kaushik Ghosh<br>
+  <a href="mailto:kaushikghosh199832@gmail.com">kaushikghosh199832@gmail.com</a></p>
+</footer>
